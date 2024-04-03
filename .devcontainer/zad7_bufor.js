@@ -1,5 +1,5 @@
 // obsluga bufora
-var bufer = new Buffer("moj bufor");
+var bufer = new Buffer(2);
 bufer.write("jakis tekst  ");
 
 console.log(bufer)
