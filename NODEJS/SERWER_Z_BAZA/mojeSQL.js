@@ -1,10 +1,26 @@
 var mysql = require("mysql");
 
-var connection = mysqli.createConnection({
+var connection = mysql.createConnection({
     host: "localhost",
-    user: "root",
-    password: "",
-    database: "test"
+    user: "mariadb",
+    password: "mariadb",
+    database: "mariadb"
 })
 
-console.log(connection)
+//console.log(connection)
+connection.query("INSERT INTO users VALUES('Michal','Chebes');", function(err,rows){
+    if(console.log(err)){
+        console.log(err)
+    }
+    else{
+        console.log(rows)
+    }
+})
+connection.query("SELECT * FROM users", function(err,rows){
+    if(console.log(err)){
+        console.log(err)
+    }
+    else{
+        console.log(rows)
+    }
+})
